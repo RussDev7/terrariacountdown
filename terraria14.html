@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- saved from url=(0014)about:internet -->
+
+<head>
+<title>Counter: Terraria 1.4 Release v3</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /></head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- Global IE fix to avoid layout crash when single word size wider than column width -->
+<!--[if IE]><style type="text/css"> body {word-wrap: break-word;}</style><![endif]-->
+
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bgimg {
+    background-image: url('images/last1.png');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: red;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 80px;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 1px;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+
+.ender {
+	position: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+
+    background-color: black;
+}
+
+.glow {
+  font-size: 50px;
+  color: #ff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+</style>
+<body>
+
+<div class="bgimg">
+  <div class="middle">
+    <h1 class="glow"><b>Time Until Terraria 1.4 Releases</b></h1>
+    <hr>
+    <b><p id="demo" class="glow" style="font-size:40px"></p></b>
+  </div>
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 16, 2020 12:00:00").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("demo").innerHTML = "Terraria 1.4 Was Released To Steam!";
+    }
+}, 1000);
+</script>
+
+<div class="ender"> <!-- Bottom Adress Bar -->
+    <div class="w3-text-white w3-center">
+
+        <tr>
+            <th>Programmed:</th>
+            <td><i>Thursday, May, 2020</i></td>
+            <td><b> |</b></td>
+        </tr>
+    
+        <tr>
+            <th>Created by:</th>
+            <td><a href="http://steamcommunity.com/id/CrypticNight7/">xXCrypticNightXx</a></td> <!-- Page -->
+			<td><b> |</b></td>
+        </tr>
+    
+        <tr>
+            <th>All rights reserved.</th>
+            <td></a></td> <!-- http://statistics.006.free-counters.co.uk/?count=generator01 -->
+        </tr>
+
+	</div>
+</div>
+
+</body>
+</html>
